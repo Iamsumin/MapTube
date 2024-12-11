@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="data:," />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>지도 기반 유튜브 검색</title>
+    <title>MapTube</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
       body {
@@ -55,7 +54,7 @@
       <button data-topic="쇼핑">쇼핑</button>
     </div>
 
-    <!-- 검색창 추가 -->
+    <!-- 검색창 -->
     <div id="search-container">
       <input
         type="text"
@@ -67,6 +66,8 @@
     </div>
 
     <div id="map"></div>
+
+    <!-- 위치 선택 UI -->
     <div
       id="location-selection"
       style="
