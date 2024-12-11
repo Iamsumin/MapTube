@@ -52,7 +52,7 @@ async function getLocationName(lat, lng) {
 
 // YouTube API로 해시태그 검색 (주제 포함)
 async function fetchVideosByHashtag(hashtag, topic) {
-  const apiKey = "AIzaSyC55FMnirPdb5tUPg3Puh9GqjonnXuJy4w"; // API 키 입력
+  const apiKey = "Your API KEY"; // API 키 입력
 
   // 검색 쿼리 생성
   const query = `${hashtag} ${topic}`.trim(); // 해시태그와 주제를 조합
