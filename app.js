@@ -18,8 +18,10 @@ const popularLocations = {
 
 // 지도 초기화 (map 선언 및 초기화)
 const map = L.map("map").setView([37.5665, 126.978], 10); // 서울 좌표
-L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
-  attribution: '&copy; <a href="https://carto.com/">CartoDB</a> contributors',
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "&copy; OpenStreetMap contributors",
+  minZoom: 3, // 최소 줌 레벨
+  maxZoom: 19, // 최대 줌 레벨 (지원되는 최대 값으로 설정)
 }).addTo(map);
 
 // 전역 변수로 주제 선택 및 마커 그룹 저장
