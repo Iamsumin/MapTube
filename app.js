@@ -1,6 +1,5 @@
 const popularLocations = {
-  // 서울
-  명동: { city: "서울", suburb: "명동" },
+  // 서울,
   을지로: { city: "서울", suburb: "을지로" },
   강남역: { city: "서울", suburb: "강남역" },
   홍대입구: { city: "서울", suburb: "홍대" },
