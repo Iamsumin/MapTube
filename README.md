@@ -2,6 +2,9 @@
 
 **MapTube** is a web application that combines interactive maps with YouTube videos, allowing users to explore different locations and find videos related to selected topics (e.g., food, shopping, tourism).
 
+## Demo
+[Watch the MapTube demo on YouTube](https://youtu.be/gt2NM__Z4mA?si=cEIj69W3AygAR7IQ)
+
 ## Features
 
 - **Interactive Map**: Explore locations using a map powered by OpenStreetMap and Leaflet.js.
