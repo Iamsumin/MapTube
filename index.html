@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="data:," />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지도 기반 유튜브 검색</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      #map {
+        height: 60vh;
+        width: 100%;
+      }
+      #controls {
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        border-bottom: 2px solid #ccc;
+      }
+      #search-container {
+        padding: 10px;
+        display: flex;
+        gap: 5px;
+        border-bottom: 2px solid #ccc;
+      }
+      #video-list {
+        height: 30vh;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .video-item {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+      }
+      .video-item img {
+        width: 120px;
+        height: auto;
+      }
+      .video-item a {
+        text-decoration: none;
+        font-weight: bold;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <button data-topic="맛집">맛집</button>
+      <button data-topic="관광">관광</button>
+      <button data-topic="쇼핑">쇼핑</button>
+    </div>
+
+    <!-- 검색창 추가 -->
+    <div id="search-container">
+      <input
+        type="text"
+        id="location-search"
+        placeholder="지역 이름을 입력하세요"
+        style="width: 200px"
+      />
+      <button id="search-btn">검색</button>
+    </div>
+
+    <div id="map"></div>
+    <div
+      id="location-selection"
+      style="
+        display: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        position: absolute;
+        z-index: 1000;
+      "
+    >
+      <p id="location-text"></p>
+      <!-- 지역 정보를 표시할 텍스트 요소 -->
+      <p>어떤 지역을 검색하시겠습니까?</p>
+      <button id="select-city" style="margin-right: 10px">상위 지역</button>
+      <button id="select-suburb">하위 지역</button>
+    </div>
+
+    <div id="video-list">지도에서 지역을 클릭하고 주제를 선택하세요.</div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
